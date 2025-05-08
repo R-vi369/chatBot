@@ -1,0 +1,59 @@
+// import {assets} from '../../assets/assets'
+import { RiMenu4Line } from "react-icons/ri";
+import { AiOutlinePlus } from "react-icons/ai";
+import { RiChat2Line } from "react-icons/ri";
+import { IoIosHelpCircleOutline } from "react-icons/io";
+import { FaClockRotateLeft } from "react-icons/fa6";
+import { IoSettingsOutline } from "react-icons/io5";
+
+
+
+
+import "./sidebar.scss";
+const sidebar = () => {
+  return (
+    <div className="sidebar">
+      <div className="top">
+        <p className="menu sidebar_icons">
+          <RiMenu4Line  />
+        </p>
+        <div className="new_chat">
+          <p className="sidebar_icons">
+            <AiOutlinePlus />
+          </p>
+          <p>New chat</p>
+        </div>
+
+        <div className="recent">
+          <p className="recent_title">Recent</p>
+          <div className="recent_entry">
+            <p className="sidebar_icons">
+              <RiChat2Line />
+            </p>
+            <p>What is bot ...</p>
+          </div>
+        </div>
+      </div>
+      <div className="bottom">
+        <div className="bottom_item recent_entry">
+          <p className="sidebar_icons"> <IoIosHelpCircleOutline /></p>
+          <p>Help</p>
+        </div>
+
+        <div className="bottom_item recent_entry">
+          <p className="sidebar_icons"> <FaClockRotateLeft />
+          </p>
+          <p>Activity</p>
+        </div>
+
+        <div className="bottom_item recent_entry">
+          <p className="sidebar_icons"><IoSettingsOutline />
+          </p>
+          <p>Settings</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default sidebar;
